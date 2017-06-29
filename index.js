@@ -6,6 +6,8 @@ var mongoose = require( 'mongoose' );
 var app = require( './app' );
 var port = process.env.PORT || 3977;
 
+//Para eliminar el aviso de mongoose que devuelve por la consola donde hemos lanzado el npm start
+mongoose.Promise = global.Promise;
 // realiza la conexion a mongodb
 mongoose.connect( 'mongodb://localhost:27017/curso_mean2', ( err, res ) => {
 
